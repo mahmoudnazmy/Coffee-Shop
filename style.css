@@ -1,0 +1,66 @@
+body {
+    font-family: 'Be Vietnam Pro', 'Noto Sans Arabic', sans-serif;
+}
+
+.cartoon-border {
+    border: 3px solid #212121;
+    box-shadow: 4px 4px 0px #212121;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+}
+
+#cart-count {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: -0.25rem; /* -top-1 */
+    right: -0.25rem; /* -right-1 */
+    background-color: #ef4444; /* bg-red-500 */
+    color: white;
+    border-radius: 9999px; /* rounded-full */
+    width: 1.5rem; /* w-6 */
+    height: 1.5rem; /* h-6 */
+    font-size: 0.75rem; /* text-xs */
+    font-weight: 700; /* font-bold */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Category Filter Styles */
+.category-filter {
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 700; /* font-bold */
+    color: #4A2E2A; /* secondary */
+    background-color: #F7F3E3; /* background-light */
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.dark .category-filter {
+    color: #F7F3E3; /* background-light */
+    background-color: #4A2E2A; /* secondary */
+}
+
+.category-filter:hover {
+    transform: translateY(-2px);
+    box-shadow: 2px 2px 0px #212121;
+}
+
+.category-filter.active-filter {
+    color: white;
+    background-color: #E57A44; /* primary */
+    border: 3px solid #212121;
+    box-shadow: 4px 4px 0px #212121;
+}
+
+.dark .category-filter.active-filter {
+    color: #212121; /* background-dark */
+    background-color: #E57A44; /* primary */
+}

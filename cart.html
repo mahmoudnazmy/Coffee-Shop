@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>سلة المشتريات - قهوة عمي سعيد</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E57A44",
+                        "secondary": "#4A2E2A",
+                        "accent": "#547980",
+                        "background-light": "#F7F3E3",
+                        "background-dark": "#212121",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "Noto Sans Arabic", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-secondary dark:text-background-light">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+    <div class="layout-container flex h-full grow flex-col">
+        <header class="sticky top-0 z-50 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm shadow-md">
+            <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="flex items-center justify-between h-20">
+            <div class="flex items-center gap-4">
+            <img class="h-14 w-14 rounded-full cartoon-border" data-alt="Cartoon logo of Uncle Saeed, a man with a mustache wearing a fez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq1POhz2en0j8AxACKCVQ7fjZV3h0F-FwLCGdJ2Id4zlz4UAxCsV6LeFf1BBGu2bVhZGVnlm-WBVc4XBHoHlIHCIBDEo-6mZaLCvQ9woW6S911rvO2kfaiCRKhr9cAJRbPs4gCVTGmrE6nTziPWoftM0ksWS3Gw2jTiAQ-BFLb8AK1MVCc3qVoVTdoXmLWZvwF_44mfZ2KfpwXQe0Z5rg2m54NdGyuq_M7kgKWqVQp5VZ4JCcFmHGD87rb4JukR342xr-3iUx3_mY"/>
+            <h2 class="text-secondary dark:text-primary text-2xl font-black tracking-[-0.015em]">قهوة عمي سعيد</h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-9">
+            <a class="text-secondary dark:text-background-light text-lg font-bold leading-normal hover:text-primary dark:hover:text-primary" href="index.html">الرئيسية</a>
+            <a class="text-secondary dark:text-background-light text-lg font-bold leading-normal hover:text-primary dark:hover:text-primary" href="menu.html">منتجاتنا</a>
+            <a class="text-secondary dark:text-background-light text-lg font-bold leading-normal hover:text-primary dark:hover:text-primary" href="#">عنا</a>
+            </nav>
+            <div class="flex items-center gap-4">
+            <a href="cart.html" class="relative flex items-center justify-center rounded-full h-12 w-12 bg-primary/20 text-secondary dark:text-background-light dark:bg-secondary/50 cartoon-border">
+                <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+                <span id="cart-count" class="absolute -top-1 -right-1 flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 rounded-full" style="display: none;">0</span>
+            </a>
+            <button id="mobile-menu-button" class="md:hidden flex items-center justify-center rounded-full h-12 w-12 bg-primary/20 text-secondary dark:text-background-light dark:bg-secondary/50 cartoon-border">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+            </button>
+            </div>
+            </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background-light dark:bg-background-dark/80">
+                <a class="text-secondary dark:text-background-light block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-primary" href="index.html">الرئيسية</a>
+                <a class="text-secondary dark:text-background-light block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-primary" href="menu.html">منتجاتنا</a>
+                <a class="text-secondary dark:text-background-light block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-primary" href="#">عنا</a>
+            </div>
+        </header>
+        <div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+            <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                <main class="flex-grow p-4 lg:grid lg:grid-cols-3 lg:gap-8">
+                    <div class="lg:col-span-2">
+                        <div class="flex flex-wrap justify-between gap-4 py-4 mb-8">
+                            <p class="text-[#181411] dark:text-white text-3xl sm:text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">سلة المشتريات</p>
+                            <div class="flex gap-4">
+                                <a href="menu.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-[#f4f2f0] dark:bg-primary/20 text-[#181411] dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+                                    <span class="truncate">متابعة التسوق</span>
+                                </a>
+                                <button id="clear-cart" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-red-500/10 text-red-500 text-sm font-bold leading-normal tracking-[0.015em]">
+                                    <span class="material-symbols-outlined mr-2">delete_sweep</span>
+                                    <span class="truncate">إفراغ السلة</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="space-y-4 cart-items">
+                            <!-- Cart items will be injected here by script.js -->
+                        </div>
+                        <div id="customer-info-section" class="mt-8 p-6 bg-white dark:bg-background-dark/50 rounded-lg cartoon-border">
+                            <h3 class="text-lg font-bold text-[#181411] dark:text-white mb-4">بيانات العميل</h3>
+                            <form id="user-info-form" class="space-y-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-[#897361] dark:text-gray-400">الاسم</label>
+                                    <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm dark:bg-background-dark dark:border-gray-600 dark:placeholder-gray-400" required>
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium text-[#897361] dark:text-gray-400">رقم الهاتف</label>
+                                    <input type="tel" id="phone" name="phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm dark:bg-background-dark dark:border-gray-600 dark:placeholder-gray-400" required>
+                                </div>
+                                <div>
+                                    <label for="address" class="block text-sm font-medium text-[#897361] dark:text-gray-400">العنوان</label>
+                                    <input type="text" id="address" name="address" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm dark:bg-background-dark dark:border-gray-600 dark:placeholder-gray-400" required>
+                                </div>
+                                <div>
+                                    <label for="notes" class="block text-sm font-medium text-[#897361] dark:text-gray-400">ملاحظات (اختياري)</label>
+                                    <textarea id="notes" name="notes" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary sm:text-sm dark:bg-background-dark dark:border-gray-600 dark:placeholder-gray-400"></textarea>
+                                </div>
+                                <button type="submit" class="complete-order flex mt-6 w-full min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] cartoon-border transition-transform hover:scale-105">
+                                    <span class="truncate">إرسال الطلب عبر واتساب</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-1">
+                        <div id="order-summary-section" class="mt-8 lg:mt-0 p-6 bg-white dark:bg-background-dark/50 rounded-lg sticky top-24 cartoon-border cart-summary">
+                            <!-- Cart summary will be injected here by script.js -->
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
