@@ -82,7 +82,7 @@ ammi-saeed-coffee/
 ### **Installation**
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ammi-saeed-coffee.git
+git clone https://github.com/mahmoudnazmy/ammi-saeed-coffee.git
 
 # Navigate to project directory
 cd ammi-saeed-coffee
@@ -147,29 +147,7 @@ colors: {
 
 ---
 
-## 📸 **Screenshots**
 
-<div align="center">
-
-### 🏠 Homepage Design
-![Homepage](https://via.placeholder.com/800x400/E57A44/FFFFFF?text=Homepage+Preview)
-*Traditional meets modern with cartoon aesthetics*
-
----
-
-### 🛍️ Product Catalog
-![Menu Page](https://via.placeholder.com/800x400/4A2E2A/FFFFFF?text=Menu+Page+Preview)
-*Easy browsing with smart filtering*
-
----
-
-### 🛒 Shopping Cart
-![Cart Page](https://via.placeholder.com/800x400/547980/FFFFFF?text=Cart+Page+Preview)
-*Intuitive checkout experience*
-
-</div>
-
----
 
 ## 🏆 **Why This Project Stands Out**
 
@@ -195,24 +173,7 @@ colors: {
 
 ---
 
-## 🤝 **Contributing**
 
-Contributions are what make the open-source community amazing! Any contributions you make are **greatly appreciated**.
-```bash
-# Fork the project
-# Create your feature branch
-git checkout -b feature/AmazingFeature
-
-# Commit your changes
-git commit -m 'Add some AmazingFeature'
-
-# Push to the branch
-git push origin feature/AmazingFeature
-
-# Open a Pull Request
-```
-
----
 
 ## 📜 **License**
 
