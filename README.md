@@ -158,20 +158,6 @@ colors: {
 🎨 **Attention to Detail** – Custom borders, shadows, and animations  
 ♿ **Accessibility First** – Semantic HTML & proper ARIA labels  
 
----
-
-## 🔮 **Roadmap & Future Enhancements**
-
-- [ ] 💝 Wishlist functionality
-- [ ] ⭐ Product reviews & ratings
-- [ ] 🎁 Discount codes & promotions
-- [ ] 🌐 English language version
-- [ ] 💳 Payment gateway integration
-- [ ] 🏅 Loyalty points system
-- [ ] 📊 Admin dashboard
-- [ ] 🔔 Order tracking notifications
-
----
 
 
 
@@ -191,16 +177,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <a href="https://mahmoudnazmy.github.io/Portfolio/">
   <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio"/>
 </a>
-<a href="https://www.linkedin.com/in/yourprofile/">
+<a href="https://www.linkedin.com/in/mahmoud-n/">
   <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 <a href="https://github.com/MahmoudNazmy">
   <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
 </a>
-<a href="mailto:your.email@example.com">
-  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-</a>
-<a href="https://wa.me/yourphonenumber">
+
+<a href="https://wa.me/+201093463752">
   <img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp"/>
 </a>
 
