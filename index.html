@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html class="light" dir="rtl" lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>قهوة عمي سعيد</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E57A44",
+                        "secondary": "#4A2E2A",
+                        "accent": "#547980",
+                        "background-light": "#F7F3E3",
+                        "background-dark": "#212121",
+                    },
+                    fontFamily: {
+                        "display": ["Be Vietnam Pro", "Noto Sans Arabic", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-secondary dark:text-background-light">
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Sticky Header -->
+            <header class="sticky top-0 z-50 bg-background-light dark:bg-background-dark/80 backdrop-blur-sm shadow-md">
+                <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+                    <div class="flex items-center justify-between h-20">
+                        <div class="flex items-center gap-4">
+                            <img class="h-14 w-14 rounded-full cartoon-border"
+                                data-alt="Cartoon logo of Uncle Saeed, a man with a mustache wearing a fez"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq1POhz2en0j8AxACKCVQ7fjZV3h0F-FwLCGdJ2Id4zlz4UAxCsV6LeFf1BBGu2bVhZGVnlm-WBVc4XBHoHlIHCIBDEo-6mZaLCvQ9woW6S911rvO2kfaiCRKhr9cAJRbPs4gCVTGmrE6nTziPWoftM0ksWS3Gw2jTiAQ-BFLb8AK1MVCc3qVoVTdoXmLWZvwF_44mfZ2KfpwXQe0Z5rg2m54NdGyuq_M7kgKWqVQp5VZ4JCcFmHGD87rb4JukR342xr-3iUx3_mY" />
+                            <h2 class="text-secondary dark:text-primary text-2xl font-black tracking-[-0.015em]">قهوة
+                                عمي سعيد</h2>
+                        </div>
+                        <nav class="hidden md:flex items-center gap-9">
+                            <a class="text-secondary dark:text-background-light text-lg font-bold leading-normal hover:text-primary dark:hover:text-primary"
+                                href="index.html">الرئيسية</a>
+                            <a class="text-secondary dark:text-background-light text-lg font-bold leading-normal hover:text-primary dark:hover:text-primary"
+                                href="menu.html">منتجاتنا</a>
+                            <a class="text-secondary dark:text-background-light text-lg font-bold leading-normal hover:text-primary dark:hover:text-primary"
+                                href="#">عنا</a>
+                        </nav>
+                        <div class="flex items-center gap-4">
+                            <a href="cart.html"
+                                class="relative flex items-center justify-center rounded-full h-12 w-12 bg-primary/20 text-secondary dark:text-background-light dark:bg-secondary/50 cartoon-border">
+                                <span class="material-symbols-outlined text-2xl">shopping_cart</span>
+                                <span id="cart-count"
+                                    class="absolute -top-1 -right-1 flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-red-500 rounded-full"
+                                    style="display: none;">0</span>
+                            </a>
+                            <button id="mobile-menu-button"
+                                class="md:hidden flex items-center justify-center rounded-full h-12 w-12 bg-primary/20 text-secondary dark:text-background-light dark:bg-secondary/50 cartoon-border">
+                                <span class="material-symbols-outlined text-2xl">menu</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="mobile-menu"
+                    class="hidden md:hidden px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background-light dark:bg-background-dark/80">
+                    <a class="text-secondary dark:text-background-light block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-primary"
+                        href="index.html">الرئيسية</a>
+                    <a class="text-secondary dark:text-background-light block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-primary"
+                        href="menu.html">منتجاتنا</a>
+                    <a class="text-secondary dark:text-background-light block px-3 py-2 rounded-md text-base font-medium hover:text-primary dark:hover:text-primary"
+                        href="#">عنا</a>
+                </div>
+            </header>
+            <main class="flex-1">
+                <!-- Hero Section -->
+                <section
+                    class="py-16 sm:py-24 relative overflow-hidden bg-gradient-to-br from-background-light to-primary/10 dark:from-background-dark dark:to-secondary/20">
+                    <div class="absolute inset-0 opacity-10 dark:opacity-5"
+                        style="background-image: url('https://www.transparenttextures.com/patterns/lined-paper.png');">
+                    </div>
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
+                            <div class="text-center lg:text-right">
+                                <h1
+                                    class="text-5xl md:text-7xl font-black tracking-tighter text-secondary dark:text-primary leading-tight animate-fade-in-up">
+                                    قهوة عمي سعيد - طعم زمان الأصيل</h1>
+                                <p
+                                    class="mt-4 text-xl text-secondary/80 dark:text-background-light/80 animate-fade-in-up animation-delay-200">
+                                    نقدم لكم أجود أنواع البن المحمص بحب وشغف، لتستمتعوا بتجربة قهوة لا مثيل لها.</p>
+                                <a href="menu.html"
+                                    class="mt-8 flex-shrink-0 inline-flex items-center justify-center rounded-full h-16 px-10 bg-primary text-white text-xl font-bold cartoon-border transition-transform transform hover:scale-105 animate-bounce-in animation-delay-400">
+                                    <span>اطلب الآن</span>
+                                </a>
+                                <div
+                                    class="mt-8 flex justify-center lg:justify-start gap-6 animate-fade-in-up animation-delay-600">
+                                    <div class="flex items-center gap-2 text-secondary dark:text-background-light">
+                                        <span class="material-symbols-outlined text-accent">local_fire_department</span>
+                                        <span class="font-bold">تحميص طازج</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-secondary dark:text-background-light">
+                                        <span class="material-symbols-outlined text-accent">local_shipping</span>
+                                        <span class="font-bold">توصيل سريع</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center animate-fade-in-right animation-delay-800">
+                                <img class="w-full max-w-md rounded-xl cartoon-border"
+                                    data-alt="A charismatic cartoon illustration of Uncle Saeed wearing a fez and vest, happily serving a cup of coffee with steam rising from it."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMNjrwoIapIpje2dV8H1qMYQ9PZCt7HPmlJme6a5fxSLaTBc2q3b8X649myRQRtnkL52TcD0KPOf-YDXtsBNWmUoH058eLIFwg8_u0H6Dm9hh2WhwX9MzvoMeYKEWyfPjeG61d47cNuc5MvA3xjSk2_RU0zIMELatO8Fmsv3XP02AiGXACrVHf3czS9zKeFEtJiUC4yJWOLeiDo5gVP1CAEfKAQntvxVlSQ2wjQdvMT6WpzY-zEQgYsgg8mEFUmy7_qY5afNtXUFY" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Features Section -->
+                <section class="py-16 sm:py-24 bg-primary/10 dark:bg-secondary/20">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl md:text-5xl font-black text-secondary dark:text-primary">ليه تختار قهوة
+                                عمي سعيد؟</h2>
+                            <p class="mt-3 text-lg text-secondary/80 dark:text-background-light/80 max-w-2xl mx-auto">
+                                لأننا نهتم بأدق التفاصيل من حبة البن حتى فنجانك.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div
+                                class="bg-background-light dark:bg-background-dark p-6 rounded-xl cartoon-border text-center flex flex-col items-center">
+                                <img class="h-32 w-32 sm:h-48 sm:w-48 object-contain"
+                                    data-alt="Cartoon illustration of coffee beans being roasted in a traditional rotating drum."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKDDdbImbr-M536GDdtx-tKBHBRY4yi1LTDbhO0V8zGSDHNoWDCLAPGSeOq1b-LIUUor-mgOKFQyAtm1-HcqVU4rhxfVnX3wm4eTfTqydF0rLo8Cjn3Ba1u1Ex5cLq9e6Y1kfI-N_4_dwIs3chliADdUNCaEopGZxkUtLEhmSNWhVJpnAijCbbXrm23m_DDwRScpFWlFGSsRXKu3Jhx8u3OxMhugYAtUwzB9TK17ZprLySlhFtaBafFS9m_bU7oEt_LZTh_4bAt-g" />
+                                <h3 class="mt-4 text-2xl font-bold text-secondary dark:text-background-light">تحميص بحب
+                                </h3>
+                                <p class="mt-2 text-secondary/80 dark:text-background-light/80">نحمص حبوب البن بعناية
+                                    فائقة يومياً لنضمن لك نكهة غنية وفريدة.</p>
+                            </div>
+                            <div
+                                class="bg-background-light dark:bg-background-dark p-6 rounded-xl cartoon-border text-center flex flex-col items-center">
+                                <img class="h-32 w-32 sm:h-48 sm:w-48 object-contain"
+                                    data-alt="Playful cartoon of a fast delivery scooter with a coffee cup logo on the side."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHI9L6SzjWdI3XBgj0iYZF91mz9NYf9lcdqDOAlvyxf_2QyVqoT1Dhlty3He-yMlcLAEUrJbiSwdZbv5lH1rgc8MaRy9LFnw_EwZLl__E6R3i4TIK0Q-nlcwDA1_ZoNZzi6BfgSmc9B6_HglVgdK22GgfwUuxnSO0mDpAWyUgei1j2i8-ZvA-HLW--XIzuiJ3YpSSGjCQ9ZyS-jBiNzG_Qd-VJB9MtvpqRybjFQX7kFG1_JqPLbBHf9HuITB658AS_awo6f7dpXH8" />
+                                <h3 class="mt-4 text-2xl font-bold text-secondary dark:text-background-light">توصيل سريع
+                                </h3>
+                                <p class="mt-2 text-secondary/80 dark:text-background-light/80">قهوتك المفضلة تصلك ساخنة
+                                    وطازجة إلى باب بيتك في أسرع وقت.</p>
+                            </div>
+                            <div
+                                class="bg-background-light dark:bg-background-dark p-6 rounded-xl cartoon-border text-center flex flex-col items-center">
+                                <img class="h-32 w-32 sm:h-48 sm:w-48 object-contain"
+                                    data-alt="Cartoon drawing of a cozy cafe interior with a table and two chairs."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUy8iYpxcx6zx8bj9PI4XhmSeKpFobkLxuh3RbiTg2S3-L551e-lbNvOjAUwUEWPxmwKwQKc9UpnxVb2nCyBHTWw1T4Wel_ojA9h3tu0QSkr8R_Zboc9rTohzMRsH9TtCjNh_Apu7BVPZ1m-eYQ1Vo3jZilGUVj8XJcP4v9PETRbFH2lLZMOPsjiq_0gTRZNxI2GPn-KwZxG3W1Zrm-PGE5rD4iBJUQ34oAUoz4e22rTsb7ko4QBtJUmTYuEH_QunyV8C94h5mElI" />
+                                <h3 class="mt-4 text-2xl font-bold text-secondary dark:text-background-light">تجربة
+                                    فريدة</h3>
+                                <p class="mt-2 text-secondary/80 dark:text-background-light/80">أجواء مصرية أصيلة ومذاق
+                                    لا ينسى في كل ركن من أركان مقهانا.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Popular Products -->
+                <section class="py-16 sm:py-24">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl md:text-5xl font-black text-secondary dark:text-primary">الأكثر مبيعاً
+                            </h2>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="bg-background-light dark:bg-secondary/20 rounded-xl cartoon-border overflow-hidden flex flex-col product"
+                                data-id="1" data-name="بن سادة" data-price="120"
+                                data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDv-D3VEEs58Un9qqTBUg80_dgiKubi1Z8OZwT778hGa9YlCJ-g6khv0e8EVIkekxYED9kgpVe47-D4x4SX-0B-iNlUAs1XaDYQP8SuEGkTOyjoDMaRMYOWklZbHdy_MNzjh4WBi7_iv-XKNAlh-ZyLQuEEzZc-ZQNhs-drso7PNt5G_E6Hyx3lJ5SSRZhRAGZYmlypTDtPOaUO1hRKqDQ65iasih2nrrkn-R24V1YPAycm0IuimKL8gCGkdG4QHNyC8MoLGG1SkTY">
+                                <img class="w-full h-40 sm:h-56 object-contain p-4"
+                                    data-alt="Cartoon illustration of a coffee bag with Arabic text for 'Plain Coffee'."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv-D3VEEs58Un9qqTBUg80_dgiKubi1Z8OZwT778hGa9YlCJ-g6khv0e8EVIkekxYED9kgpVe47-D4x4SX-0B-iNlUAs1XaDYQP8SuEGkTOyjoDMaRMYOWklZbHdy_MNzjh4WBi7_iv-XKNAlh-ZyLQuEEzZc-ZQNhs-drso7PNt5G_E6Hyx3lJ5SSRZhRAGZYmlypTDtPOaUO1hRKqDQ65iasih2nrrkn-R24V1YPAycm0IuimKL8gCGkdG4QHNyC8MoLGG1SkTY" />
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="text-xl font-bold text-secondary dark:text-background-light">بن سادة</h3>
+                                    <p class="mt-2 text-secondary/80 dark:text-background-light/80 flex-grow">مزيجنا
+                                        الكلاسيكي بنكهة قوية ومتوازنة.</p>
+                                    <div class="mt-4 flex justify-between items-center">
+                                        <p class="text-xl font-bold text-primary">120 ج.م</p>
+                                        <button
+                                            class="add-to-cart flex items-center justify-center rounded-full h-12 w-12 bg-accent text-white cartoon-border">
+                                            <span class="material-symbols-outlined">add_shopping_cart</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-background-light dark:bg-secondary/20 rounded-xl cartoon-border overflow-hidden flex flex-col product"
+                                data-id="2" data-name="بن محوج" data-price="140"
+                                data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuCg6rxl4G4ewkw9fY5VSzwy0EQoLo0HZAcW3ZDlRMRxwKf3NTcZKZRZr7YSXAp8-7JV7rFv361QJ2vtuPJjlgM4fhNSWKB-RG8cgQbuwDlcZ6NwgA4fahsQVh4zh-WolBYImr3TPMlcuI5mPIOTmxS9RT9k5IQzMAIDMhvCaoY2DMhnGPepabWtAKocna-poLW1XRZliFRpmewhdPLVfeZ8hhJrj4wsmAjRB5q-9Quydn3ZCYbgih3sqB6JwLAHwDwbnjcB2vigY6A">
+                                <img class="w-full h-40 sm:h-56 object-contain p-4"
+                                    data-alt="Cartoon illustration of a coffee bag with text for 'Spiced Coffee'."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCg6rxl4G4ewkw9fY5VSzwy0EQoLo0HZAcW3ZDlRMRxwKf3NTcZKZRZr7YSXAp8-7JV7rFv361QJ2vtuPJjlgM4fhNSWKB-RG8cgQbuwDlcZ6NwgA4fahsQVh4zh-WolBYImr3TPMlcuI5mPIOTmxS9RT9k5IQzMAIDMhvCaoY2DMhnGPepabWtAKocna-poLW1XRZliFRpmewhdPLVfeZ8hhJrj4wsmAjRB5q-9Quydn3ZCYbgih3sqB6JwLAHwDwbnjcB2vigY6A" />
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="text-xl font-bold text-secondary dark:text-background-light">بن محوج</h3>
+                                    <p class="mt-2 text-secondary/80 dark:text-background-light/80 flex-grow">لمسة من
+                                        الهيل وبهارات أخرى لنكهة شرقية أصيلة.</p>
+                                    <div class="mt-4 flex justify-between items-center">
+                                        <p class="text-xl font-bold text-primary">140 ج.م</p>
+                                        <button
+                                            class="add-to-cart flex items-center justify-center rounded-full h-12 w-12 bg-accent text-white cartoon-border">
+                                            <span class="material-symbols-outlined">add_shopping_cart</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-background-light dark:bg-secondary/20 rounded-xl cartoon-border overflow-hidden flex flex-col product"
+                                data-id="3" data-name="قهوة تركي" data-price="130"
+                                data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuAwMXkQHOGyjlFjxtTjFl8lsB9FNVq8cgwKVztjjT0PfUj1HHspZ3jLdqq8b5zIWf4mq3CDhhMrnuf3xc_rZ4DiDXdpaQ5f6Wtm4GKSpxCAR-dllHxZV_rBJu7E2d8OcVT8Y9bhc6rCczwgcZ94Si5n8jvW5oiJw6P-_pPefhrgMM1mAzgALnKIp-SqNtlv0FLZB5kP7uhblO2wvZU-Ea90jsXtTJP2QqLhOYaZgjNZ3fYqCDEhvZXJMkMqIWAHT6rbjMKUTp9TM5o">
+                                <img class="w-full h-40 sm:h-56 object-contain p-4"
+                                    data-alt="Cartoon illustration of a coffee bag with text for 'Turkish Coffee'."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwMXkQHOGyjlFjxtTjFl8lsB9FNVq8cgwKVztjjT0PfUj1HHspZ3jLdqq8b5zIWf4mq3CDhhMrnuf3xc_rZ4DiDXdpaQ5f6Wtm4GKSpxCAR-dllHxZV_rBJu7E2d8OcVT8Y9bhc6rCczwgcZ94Si5n8jvW5oiJw6P-_pPefhrgMM1mAzgALnKIp-SqNtlv0FLZB5kP7uhblO2wvZU-Ea90jsXtTJP2QqLhOYaZgjNZ3fYqCDEhvZXJMkMqIWAHT6rbjMKUTp9TM5o" />
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="text-xl font-bold text-secondary dark:text-background-light">قهوة تركي
+                                    </h3>
+                                    <p class="mt-2 text-secondary/80 dark:text-background-light/80 flex-grow">مطحونة
+                                        بدرجة فائقة النعومة لوجه قهوة غني.</p>
+                                    <div class="mt-4 flex justify-between items-center">
+                                        <p class="text-xl font-bold text-primary">130 ج.م</p>
+                                        <button
+                                            class="add-to-cart flex items-center justify-center rounded-full h-12 w-12 bg-accent text-white cartoon-border">
+                                            <span class="material-symbols-outlined">add_shopping_cart</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-background-light dark:bg-secondary/20 rounded-xl cartoon-border overflow-hidden flex flex-col product"
+                                data-id="4" data-name="قهوة فرنسية" data-price="150"
+                                data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDKdslnDd6-MRL_8pqf578_EGJu9h_pDVRutH6g2EtdtuRAMwpJN8lSpXAml7DHpeaEkizQmw9TiTMC3707mpzGcVUR_U17sknZ77g6bp_a3bpjGlBL4xeO2nnt3J-6aJl6DbniC5f6XC78tr67uYPIkUzsOm1REUi_2lzGI457aduCzN253ra963VI0gIa4UQkpcV6ZEQEewKbqFCIpaZwzO9ryX1ptD6JUeGY5iiHw3xmZi-HE8Igbj3WEFy_ycJS795Qyh7xipY">
+                                <img class="w-full h-40 sm:h-56 object-contain p-4"
+                                    data-alt="Cartoon illustration of a coffee bag with text for 'French Coffee'."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKdslnDd6-MRL_8pqf578_EGJu9h_pDVRutH6g2EtdtuRAMwpJN8lSpXAml7DHpeaEkizQmw9TiTMC3707mpzGcVUR_U17sknZ77g6bp_a3bpjGlBL4xeO2nnt3J-6aJl6DbniC5f6XC78tr67uYPIkUzsOm1REUi_2lzGI457aduCzN253ra963VI0gIa4UQkpcV6ZEQEewKbqFCIpaZwzO9ryX1ptD6JUeGY5iiHw3xmZi-HE8Igbj3WEFy_ycJS795Qyh7xipY" />
+                                <div class="p-6 flex flex-col flex-grow">
+                                    <h3 class="text-xl font-bold text-secondary dark:text-background-light">قهوة فرنسية
+                                    </h3>
+                                    <p class="mt-2 text-secondary/80 dark:text-background-light/80 flex-grow">مزيج خفيف
+                                        مع نكهات الحليب المحمصة.</p>
+                                    <div class="mt-4 flex justify-between items-center">
+                                        <p class="text-xl font-bold text-primary">150 ج.م</p>
+                                        <button
+                                            class="add-to-cart flex items-center justify-center rounded-full h-12 w-12 bg-accent text-white cartoon-border">
+                                            <span class="material-symbols-outlined">add_shopping_cart</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center mt-12">
+                            <a href="menu.html"
+                                class="inline-flex items-center justify-center rounded-full h-16 px-10 bg-primary text-white text-xl font-bold cartoon-border transition-transform transform hover:scale-105">
+                                <span>عرض كل المنتجات</span>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <!-- How to Order Section -->
+                <section class="py-16 sm:py-24 bg-primary/10 dark:bg-secondary/20">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl md:text-5xl font-black text-secondary dark:text-primary">اطلب في 4 خطوات
+                                سهلة</h2>
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-accent/30 -translate-y-1/2">
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center relative">
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="flex items-center justify-center h-16 w-16 sm:h-24 sm:w-24 rounded-full bg-background-light dark:bg-background-dark cartoon-border text-accent text-3xl sm:text-5xl font-black">
+                                        <span class="material-symbols-outlined text-3xl sm:text-5xl">coffee</span>
+                                    </div>
+                                    <h3 class="mt-4 text-xl font-bold">اختر قهوتك</h3>
+                                    <p class="mt-1 text-secondary/80 dark:text-background-light/80">تصفح قائمتنا
+                                        المتنوعة واختر ما يناسب ذوقك الرفيع.</p>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="flex items-center justify-center h-16 w-16 sm:h-24 sm:w-24 rounded-full bg-background-light dark:bg-background-dark cartoon-border text-accent text-3xl sm:text-5xl font-black">
+                                        <span
+                                            class="material-symbols-outlined text-3xl sm:text-5xl">shopping_cart</span>
+                                    </div>
+                                    <h3 class="mt-4 text-xl font-bold">أضف للسلة</h3>
+                                    <p class="mt-1 text-secondary/80 dark:text-background-light/80">أضف منتجاتك المفضلة
+                                        إلى سلة التسوق الخاصة بك بسهولة.</p>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="flex items-center justify-center h-16 w-16 sm:h-24 sm:w-24 rounded-full bg-background-light dark:bg-background-dark cartoon-border text-accent text-3xl sm:text-5xl font-black">
+                                        <span class="material-symbols-outlined text-3xl sm:text-5xl">credit_card</span>
+                                    </div>
+                                    <h3 class="mt-4 text-xl font-bold">أكمل الطلب</h3>
+                                    <p class="mt-1 text-secondary/80 dark:text-background-light/80">أدخل بياناتك لإتمام
+                                        عملية الشراء بأمان وسرعة.</p>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <div
+                                        class="flex items-center justify-center h-16 w-16 sm:h-24 sm:w-24 rounded-full bg-background-light dark:bg-background-dark cartoon-border text-accent text-3xl sm:text-5xl font-black">
+                                        <span class="material-symbols-outlined text-3xl sm:text-5xl">celebration</span>
+                                    </div>
+                                    <h3 class="mt-4 text-xl font-bold">استمتع بقهوتك</h3>
+                                    <p class="mt-1 text-secondary/80 dark:text-background-light/80">قهوتك اللذيذة في
+                                        طريقها إليك! استمتع بكل رشفة.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Testimonials Section -->
+                <section class="py-16 sm:py-24">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="text-center mb-12">
+                            <h2 class="text-4xl md:text-5xl font-black text-secondary dark:text-primary">قالوا عن قهوتنا
+                            </h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div class="bg-background-light dark:bg-secondary/20 p-6 rounded-xl cartoon-border">
+                                <div class="flex items-center gap-4">
+                                    <img class="h-16 w-16 rounded-full cartoon-border"
+                                        data-alt="Cartoon avatar of a smiling man with glasses."
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0nYHxB-MuFaYWrjY7kSc3YJAdh_FmsKlB9TF46pllSkTDLL_GbH0BoBA88Y746mhSWLmfXPozQl5ssMUaQ4EJbexgGgft-oaLReDImtB_eNUjLgKEjVHRL53DML5v-lYieXC5ppgdHn4SFKAjWE33tNgYqFAVLb-mJJ1jmIc3SaNonRUpphYH5MfGjBeTz1LRy8W77CHsKcKect47QPXI9AXriQpwsueMmh3y-AHBdbIxLMV4xV8aZPgZuPHjXMAn_kKVX-YZSwY" />
+                                    <div>
+                                        <h4 class="text-lg font-bold">أحمد محمود</h4>
+                                        <div class="flex text-primary">
+                                            <span class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-4 text-secondary/80 dark:text-background-light/80 italic">"أفضل قهوة في
+                                    مصر! الطعم يذكرني بقهوة جدي. خدمة ممتازة وتوصيل سريع جداً."</p>
+                            </div>
+                            <div class="bg-background-light dark:bg-secondary/20 p-6 rounded-xl cartoon-border">
+                                <div class="flex items-center gap-4">
+                                    <img class="h-16 w-16 rounded-full cartoon-border"
+                                        data-alt="Cartoon avatar of a woman with a hijab."
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0YYk_fXSxRJqtBtmTa0vSUKqCKP5LMJAwHCoA8vRSR6I4MQKXFyQN3uZY_-rinpWEVQY_jqOW3yzOPmm25dGKS42VrBN3aEOAU3LaCiZuEMd4cBOyg4w2rBsF8qZZQ7DuN3H7-vG9EMIk8OtYKhRTtS-1hHmd6S16lenacxD22t_mXmgJLTzS3Y9KmhmyNSyJq-rxS1-OCR2Kwx0rAaCJVaMoRgfgpOZAmAUZHeKN-2jnZCAlFEcRW1EWqQLk9HGc3LqMIzc48CY" />
+                                    <div>
+                                        <h4 class="text-lg font-bold">فاطمة علي</h4>
+                                        <div class="flex text-primary">
+                                            <span class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star</span>
+                                            <n </div>
+                                        </div>
+                                    </div>
+                                    <p class="mt-4 text-secondary/80 dark:text-background-light/80 italic">"البن المحوج
+                                        عندهم حكاية تانية خالص. ريحته تملأ البيت وتعدل المزاج. لن أشتري من مكان آخر."
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="bg-background-light dark:bg-secondary/20 p-6 rounded-xl cartoon-border">
+                                <div class="flex items-center gap-4">
+                                    <img class="h-16 w-16 rounded-full cartoon-border"
+                                        data-alt="Cartoon avatar of a young man with curly hair."
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcVfF_jFDi9ALexf-P2cWbTOwGrkxPEUuPnGBBeb-8ptN33Jbho8JfqijmBQ2HkK68qfzvIAbS16wvu-nprsnT5aBFMy9QLjKzkF46kTq6Nokyrxm9C2wybFiC4zD-CVJaSWGPliJwIjeBgRXZk9Yw6RZ38dbl3-hV_ThJOhsMAV3V7dKKltQOeD-8K-GHsCcjeTV6jHZ24MKWcXpZJCeTv2_83czu7r76VCwNCS2U0xSAlq7g_r3zAAD4gTDqIwKa1a2Tt4rUgio" />
+                                    <div>
+                                        <h4 class="text-lg font-bold">كريم سعيد</h4>
+                                        <div class="flex text-primary">
+                                            <span class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star</span><span
+                                                class="material-symbols-outlined">star_half</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-4 text-secondary/80 dark:text-background-light/80 italic">"أنا مدمن للقهوة
+                                    الفرنسية من عمي سعيد. تجربة رائعة في كل مرة. أوصي به بشدة!"</p>
+                            </div>
+                        </div>
+                </section>
+                <!-- Final CTA Section -->
+                <section class="py-16 sm:py-24 bg-primary/10 dark:bg-secondary/20">
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                        <h2 class="text-4xl md:text-6xl font-black text-secondary dark:text-primary">لا تفوت فنجان
+                            السعادة!</h2>
+                        <p class="mt-4 text-xl text-secondary/80 dark:text-background-light/80">اطلب الآن ودع قهوة عمي
+                            سعيد تعدل مزاجك اليوم.</p>
+                        <a href="menu.html"
+                            class="mt-8 flex-shrink-0 inline-flex items-center justify-center rounded-full h-16 px-10 bg-primary text-white text-xl font-bold cartoon-border transition-transform transform hover:scale-105">
+                            <span>تصفح منتجاتنا</span>
+                        </a>
+                    </div>
+                </section>
+            </main>
+            <!-- Footer -->
+            <footer class="bg-secondary dark:bg-black text-background-light/80 py-12 px-4 sm:px-6 lg:px-8 text-center">
+                <p class="text-xl font-bold text-primary">بُني هذا الموقع بلمسة سحرية من:</p>
+                <h3 class="text-3xl font-black text-white mt-2">Mahmoud Nazmy</h3>
+                <p class="mt-4 text-lg text-background-light/80">مطور ويب مبدع، يحول الأفكار إلى واقع رقمي مذهل.</p>
+                <p class="mt-2 text-sm text-background-light/60">هل تحتاج لموقع احترافي وإبداعي خاص بك؟</p>
+                <a href="#contact"
+                    class="mt-4 inline-block rounded-full bg-primary px-6 py-3 text-base font-bold text-white cartoon-border transition-transform transform hover:scale-105">تواصل
+                    معي الآن!</a>
+                <div class="mt-8 flex justify-center gap-6">
+                    <a href="https://mahmoudnazmy.github.io/Portfolio/">
+                        <img src="https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white"
+                            alt="Portfolio" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/mahmoud-n/">
+                        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"
+                            alt="LinkedIn" />
+                    </a>
+                    <a href="https://github.com/MahmoudNazmy">
+                        <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+                            alt="GitHub" />
+                    </a>
+                </div>
+                <p class="mt-8 text-sm text-background-light/40">© 2025 قهوة عمي سعيد. كل الحقوق محفوظة.</p>
+            </footer>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
